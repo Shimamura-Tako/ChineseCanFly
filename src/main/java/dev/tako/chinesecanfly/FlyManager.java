@@ -48,7 +48,7 @@ public final class FlyManager implements Listener {
 
     // ========== 事件监听 ==========
 
-    @EventHandler(priority = EventPriority.MONITOR)
+    @EventHandler(priority = EventPriority.NORMAL)
     public void onLocaleChange(PlayerLocaleChangeEvent event) {
         Player player = event.getPlayer();
         // event.getLocale() 返回的是新 locale
@@ -171,8 +171,8 @@ public final class FlyManager implements Listener {
             if (player != null && player.isOnline()) {
                 GameMode mode = player.getGameMode();
                 if (mode != GameMode.CREATIVE && mode != GameMode.SPECTATOR) {
-                    player.setAllowFlight(false);
                     player.setFlying(false);
+                    player.setAllowFlight(false);
                 }
             }
         }
