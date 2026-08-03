@@ -1,0 +1,6 @@
+name: ChineseCanFly
+version: ${project.version}
+main: dev.tako.chinesecanfly.ChineseCanFly
+api-version: 1.16
+description: 中国人能飞！讲中文才飞！
+author: Tako
