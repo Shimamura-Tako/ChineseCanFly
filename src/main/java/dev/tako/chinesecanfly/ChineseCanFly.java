@@ -16,6 +16,7 @@
  */
 package dev.tako.chinesecanfly;
 
+import dev.tako.chinesecanfly.metrics.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class ChineseCanFly extends JavaPlugin {
@@ -26,6 +27,10 @@ public final class ChineseCanFly extends JavaPlugin {
     public void onEnable() {
         flyManager = new FlyManager(this);
         getServer().getPluginManager().registerEvents(flyManager, this);
+
+        // bStats
+        new Metrics(this, 33133);
+
         getLogger().info("中国人能飞！插件已启用。");
     }
 
